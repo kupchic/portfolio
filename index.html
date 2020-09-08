@@ -187,15 +187,15 @@
 				Свяжитесь со мной
 			</h2>
 			<div class="contact_block">
-				<!-- //проверяем, существуют ли переменные в массиве POST -->
 
 				<form id="contact_form" class="contact_form" action="#" method="POST">
 					<div class="form_title">
-						<p>Можете просто оставить заявку,я напишу вам сегодня</p>
+						<p class="form-title-message">Можете просто оставить заявку,я напишу вам сегодня</p>
+						<p class="done-message"></p>
 					</div>
-					<input name="user_name" required minlength="5" maxlength="20" placeholder="Ваше имя" class="inname"
+					<input name="name" required minlength="5" maxlength="20" placeholder="Ваше имя" class="inname"
 						type="text">
-					<input name="email" required placeholder="Ваша почта" type="email" class="intel">
+					<input name="phone" required placeholder="Ваш телефон" type="tel" class="intel">
 					<button type="submit" class="form_but">Отправить</button>
 				</form>
 
@@ -229,10 +229,10 @@
 
 
 	</footer>
-
-	<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 	<script src="./js/wow.min.js"></script>
 	<script src="./js/swiper.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="./js/telegramform.js"></script>
 	<script src="./js/script.js"></script>
 </body>
 
