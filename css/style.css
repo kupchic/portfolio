@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #20202D;
@@ -11,13 +16,16 @@ body {
 img {
     max-width: 100%;
 }
-main{
+
+main {
     background: linear-gradient(0deg, #000000 0.01%, rgba(0, 0, 0, 0) 85.44%);
 }
-footer{
+
+footer {
     padding-top: 40px;
-    background:  linear-gradient(180deg, #000000 0.01%, rgba(0, 0, 0, 0) 85.44%) ;
+    background: linear-gradient(180deg, #000000 0.01%, rgba(0, 0, 0, 0) 85.44%);
 }
+
 .container {
     margin: auto;
     max-width: 945px;
@@ -49,6 +57,7 @@ footer{
     text-align: justify;
     font-size: 16px;
     line-height: 28px;
+    margin: 20px 0;
 }
 
 .hero_title {
@@ -64,7 +73,7 @@ footer{
     margin: 0px 0px;
 }
 
-.but_consult{
+.but_consult {
     padding: 20px;
     text-align: center;
     font-weight: bold;
@@ -74,14 +83,18 @@ footer{
     background: linear-gradient(180deg, #FDDE76 0%, #FFBB01 100%);
     box-shadow: 0px 4px 0px #B68500;
 }
-.but_consult:hover{
-    font-size: 120%;
-    
+
+.but_consult:hover {
+    transform: scale(1.03);
+    outline: none;
+
 }
-.link_inbut{
+
+.link_inbut {
     text-decoration: none;
     color: inherit;
 }
+
 .hero_avatar {
     width: 320px;
     height: 320px;
@@ -143,12 +156,13 @@ footer{
 .project_title {
     margin: 0;
     margin-bottom: 30px;
-    
+
 }
-.site_link{
+
+.site_link {
     text-decoration: none;
     color: #fff;
-    
+
 }
 
 .progect_text {
@@ -214,6 +228,10 @@ footer{
 
 }
 
+.feedback_text p {
+    padding-right: 30px;
+}
+
 .project_feedback {
     display: flex;
 
@@ -228,16 +246,17 @@ footer{
     justify-content: space-between;
 }
 
-img[alt=project-img]{
+img[alt=project-img] {
     width: 338px;
     height: 268px;
     border-radius: 8px;
 }
+
 .slider {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     padding: 2px;
     height: auto;
     margin-bottom: 30px;
@@ -255,10 +274,11 @@ img[alt=project-img]{
 }
 
 
-.intel,.inname {
+.intel,
+.inname {
     font-size: 14px;
     box-sizing: border-box;
-    border: none;
+    border: 2px solid transparent;
     width: 100%;
     padding: 18px 15px;
     background: #F8F8F8;
@@ -313,12 +333,13 @@ img[alt=project-img]{
     background-position: left 20px center;
 }
 
-input:focus{
-background-color: #fff;
-border:orange solid 2px;
-outline: none;
+input:focus {
+    background-color: #fff;
+    border: orange solid 2px;
+    outline: none;
 
 }
+
 .social_contacts {
     max-width: 500px;
     min-width: 250px;
@@ -371,6 +392,7 @@ outline: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .telega {
@@ -428,21 +450,25 @@ outline: none;
     height: 10px;
     background-color: orange;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
     width: 5px;
     height: 5px;
     border: 3px solid orange;
 }
 
-
+.mobile_phone h2,.email h2{
+    padding-bottom: 15px;
+}
 
 @media(max-width:1000px) {
-    .last_project{
+    .last_project {
         text-align: center;
     }
-    .slider{
+
+    .slider {
         max-width: 700px;
-    margin: 0 auto;
+        margin: 0 auto;
     }
 
     .project_image {
@@ -459,44 +485,58 @@ outline: none;
 
     .project_image img {
         width: 690px;
-        height: auto;
+        height: 390px;
+        object-fit: fill;
     }
-    .progect_text{
+
+    .progect_text {
         max-width: 690px;
         margin-bottom: 20px;
+        padding-bottom: 20px;
     }
-    #contact_form{
+
+    #contact_form {
         margin-right: 20px;
     }
-    .contacts_data{
+
+    .contacts_data {
         flex-direction: column;
     }
-    /* .contacts_links{
-        flex-direction: column;
-        flex-wrap: wrap;
-    } */
-    .contact_block{
+
+    .contact_block {
+        align-items: flex-start;
         flex-wrap: nowrap;
         justify-content: space-between;
     }
-    .social_contacts{
-    max-width: 400px;
-}
-.soc_cites{
-    flex-direction: column;
-}
-}
-@media(max-width:850px) {
-    #contact_form{
-        margin-right: 0;
-       
+
+    .social_contacts {
+        max-width: 400px;
     }
-    .footer_title{
+
+    .soc_cites {
+        flex-direction: column;
+    }
+    .mobile_phone,.email{
+        margin-bottom: 30px;
+        
+    }
+    
+}
+
+@media(max-width:850px) {
+    #contact_form {
+        margin: 0 auto 30px;
+        padding: 40px 25px;
+    }
+
+    .footer_title {
         text-align: center;
     }
- .contact_block {
+
+    .contact_block {
         justify-content: center;
     }
+
     .hero_info {
         flex-direction: column;
     }
@@ -523,35 +563,38 @@ outline: none;
         margin-bottom: 35px;
         max-width: 45%;
     }
-    
-    .contacts_data{
-        flex-direction:  initial;
+
+    .contacts_data {
+        flex-direction: initial;
     }
+
     /* .contacts_links{
         flex-direction: column;
         flex-wrap: wrap;
     } */
-    .contact_block{
+    .contact_block {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .social_contacts{
-    max-width: 70%;
-}
-.soc_cites{
-    flex-direction: initial;
-}
+
+    .social_contacts {
+        max-width: 70%;
+    }
+
+    .soc_cites {
+        flex-direction: initial;
+    }
 }
 
 @media(max-width:550px) {
 
     .footer_title {
-        font-size: 32px;
+        font-size: 30px;
         text-align: center;
         margin-bottom: 30px;
     }
 
-    .contact_block{
+    .contact_block {
         justify-content: initial;
     }
 
@@ -559,18 +602,24 @@ outline: none;
         /* flex-direction: column; */
         font-size: 90%;
     }
-    .social_contacts{
-       max-width: 100%;
+
+    .social_contacts {
+        max-width: 100%;
     }
 }
 
 @media(max-width:500px) {
-    .site_header{
+    .project_image img {
+        height: 230px;
+    }
+    .site_header {
         padding-top: 30px;
     }
-    .hero_info{
+
+    .hero_info {
         margin-top: 60px;
     }
+
     .table_item {
         max-width: 100%;
         margin-bottom: 35px;
@@ -614,7 +663,7 @@ outline: none;
         justify-content: center;
     }
 
-        @media(max-width:330px) {
+    @media(max-width:330px) {
         .social_img {
             width: 23px;
             height: 23px;
