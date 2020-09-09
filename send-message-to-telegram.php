@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET ") {
 if (!empty($_POST['name']) && !empty($_POST['phone'])){
   if (isset($_POST['name'])) {
     if (!empty($_POST['name'])){
